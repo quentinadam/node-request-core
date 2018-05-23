@@ -1,3 +1,4 @@
+import { URL } from 'url';
 import querystring from 'querystring';
 import Result from './Result';
 import Params from './Params';

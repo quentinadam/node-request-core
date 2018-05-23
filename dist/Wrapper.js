@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const url_1 = require("url");
 const querystring_1 = __importDefault(require("querystring"));
 class Wrapper {
     constructor(requestFn) {
@@ -10,7 +11,7 @@ class Wrapper {
     }
     combineURL(url, qs) {
         if (qs !== undefined) {
-            const urlObject = new URL(url);
+            const urlObject = new url_1.URL(url);
             if (qs !== undefined) {
                 const parameters = urlObject.searchParams;
                 for (const key in qs) {
